@@ -4,13 +4,13 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UsersHasPermisosTable extends Migration
+class CreateUserHasPermisosTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $tableName = 'users_has_permisos';
+    public $tableName = 'user_has_permisos';
 
     /**
      * Run the migrations.

@@ -15,10 +15,23 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('nombre_completo');
+            $table->string('cif',15)->unique();
+            $table->string('telefono', 15)->nullable();
+            $table->date('fecha_nacimiento')->nullable();
+            $table->binary('avatar')->nullable();
+            $table->double('credito')->default(0)->nullable();
+            $table->text('tipo_rol')->nullable();
+            $table->string('cargo');
+            $table->string('ubicacion')->comment('para determinar si es remoto o en oficia');
+            $table->integer('jornada_horas');
+            $table->integer('cod_empleado')->unique();
+            $table->longText('password')->nullable();
+            $table->boolean('bloqueado')->default(0)->comment('1 si bloqueado, 0 no, activo');
+            $table->string('ultima_ip')->nullable();
+            $table->integer('session_id')->nullable();
+            $table->string('email',191)->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

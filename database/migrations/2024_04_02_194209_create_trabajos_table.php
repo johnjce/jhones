@@ -15,6 +15,9 @@ class CreateTrabajosTable extends Migration
     {
         Schema::create('trabajos', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->string('metas_seo');
+            $table->longText('cuerpo');
             $table->timestamps();
         });
     }
