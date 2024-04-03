@@ -22,12 +22,12 @@ class CreateUsersTable extends Migration
             $table->binary('avatar')->nullable();
             $table->double('credito')->default(0)->nullable();
             $table->text('tipo_rol')->nullable();
-            $table->string('cargo');
+            $table->string('cargo')->nullable();
             $table->string('ubicacion')->comment('para determinar si es remoto o en oficia');
-            $table->integer('jornada_horas');
+            $table->integer('jornada_horas')->default(8);
             $table->integer('cod_empleado')->unique();
             $table->longText('password')->nullable();
-            $table->boolean('bloqueado')->default(0)->comment('1 si bloqueado, 0 no, activo');
+            $table->boolean('bloqueado')->default(false)->comment('true, si bloqueado; false, no, activo');
             $table->string('ultima_ip')->nullable();
             $table->integer('session_id')->nullable();
             $table->string('email',191)->unique();
