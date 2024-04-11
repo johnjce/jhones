@@ -1,60 +1,58 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-
+//rutas de login/registro/remember password, etc
 Auth::routes();
 
+//************************************************rutas del frontpage*************************************************//
+
+//rutas sin login
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('frontWeb');
+})->name('frontWeb');
 
+//rutas autentificadas
 
+//*********************************************rutas del dashboard/backend********************************************//
+
+//rutas sin login
+
+//rutas autentificadas
 Route::group(['middleware' => 'auth'], function () {
+
 	Route::get('table-list', function () {
-		return view('pages.table_list');
+		return view('dashboard.pages.table_list');
 	})->name('table');
 
 	Route::get('typography', function () {
-		return view('pages.typography');
+		return view('dashboard.pages.typography');
 	})->name('typography');
 
 	Route::get('icons', function () {
-		return view('pages.icons');
+		return view('dashboard.pages.icons');
 	})->name('icons');
 
 	Route::get('map', function () {
-		return view('pages.map');
+		return view('dashboard.pages.map');
 	})->name('map');
 
 	Route::get('notifications', function () {
-		return view('pages.notifications');
+		return view('dashboard.pages.notifications');
 	})->name('notifications');
 
 	Route::get('rtl-support', function () {
-		return view('pages.language');
+		return view('dashboard.pages.language');
 	})->name('language');
 
 	Route::get('upgrade', function () {
-		return view('pages.upgrade');
+		return view('dashboard.pages.upgrade');
 	})->name('upgrade');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-});
 
-Route::group(['middleware' => 'auth'], function () {
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
-	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
-	Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
+    Route::put('/profile/password', [App\Http\Controllers\ProfileController::class, 'password'])->name('profile.password');
+    Route::put('/profile/password', [App\Http\Controllers\ProfileController::class, 'password'])->name('profile.password');
 });

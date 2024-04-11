@@ -11,11 +11,11 @@ class UserController extends Controller
     /**
      * Display a listing of the users
      *
-     * @param  \App\Models\User  $model
+     * @param \App\Models\User $model
      * @return \Illuminate\View\View
      */
     public function index(User $model)
     {
-        return view('users.index', ['users' => $model->paginate(15)]);
+        return view('dashboard.users.index', ['users' => $model->paginate(15), 'activePage' => 'dashboard', 'titlePage' => __('Dashboard'), 'title' => __('Dashboard')]);
     }
 }

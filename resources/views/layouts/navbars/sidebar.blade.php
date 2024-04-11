@@ -5,8 +5,8 @@
       Tip 2: you can also add an image using data-image tag
   -->
   <div class="logo">
-    <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+    <a href="{{ route('frontWeb') }}" class="simple-text logo-normal">
+      {{ env('APP_NAME') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -75,12 +75,6 @@
         <a class="nav-link" href="{{ route('language') }}">
           <i class="material-icons">language</i>
           <p>{{ __('RTL Support') }}</p>
-        </a>
-      </li>
-      <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
-        <a class="nav-link text-white bg-danger" href="{{ route('upgrade') }}">
-          <i class="material-icons text-white">unarchive</i>
-          <p>{{ __('Upgrade to PRO') }}</p>
         </a>
       </li>
     </ul>

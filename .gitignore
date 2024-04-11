@@ -8,6 +8,7 @@ bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
+public/
 public/storage
 public/hot
 
@@ -21,3 +22,38 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+/public/css/front/main.css
+/public/css/app.css
+/public/fonts/fa-brands-400.eot
+/public/fonts/fa-brands-400.svg
+/public/fonts/fa-brands-400.ttf
+/public/fonts/fa-brands-400.woff
+/public/fonts/fa-brands-400.woff2
+/public/fonts/fa-regular-400.eot
+/public/fonts/fa-regular-400.svg
+/public/fonts/fa-regular-400.ttf
+/public/fonts/fa-regular-400.woff
+/public/fonts/fa-regular-400.woff2
+/public/fonts/fa-solid-900.eot
+/public/fonts/fa-solid-900.svg
+/public/fonts/fa-solid-900.ttf
+/public/fonts/fa-solid-900.woff
+/public/fonts/fa-solid-900.woff2
+/public/images/logos/logo.jpeg
+/public/images/logos/logo3d.png
+/public/images/template/header/banner.png
+/public/images/template/header/header_img.png
+/public/images/template/header/logo.jpeg
+/public/images/template/header/logo3d.png
+/public/js/front/main.js
+/public/js/app.js
+/public/material/js/plugins/bootstrap-notify.js
+/public/material/js/plugins/jasny-bootstrap.min.js
+/public/material/js/plugins/jquery-jvectormap.js
+/public/material/js/plugins/sweetalert2.js
+/public/material/js/settings.js
+/public/material/scss/material-dashboard/bootstrap/scss/mixins/_image.scss
+/public/material/scss/material-dashboard/bootstrap/scss/_images.scss
+/public/mix-manifest.json
+/package-lock.json
+/.idea/watcherTasks.xml
