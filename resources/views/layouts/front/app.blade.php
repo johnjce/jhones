@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    @include('layouts.vendors.metas')
+    @include('layouts.front.vendors.metas')
     <title>{{ env('APP_NAME') }}</title>
-    @include('layouts.vendors.styles')
+    @include('layouts.front.vendors.styles')
 </head>
 <body class="homepage is-preload">
 <div id="page-wrapper">
@@ -15,6 +15,6 @@
     @include('layouts.front.footer')
 </div>
 <!-- Scripts -->
-@include('layouts.vendors.scripts')
+@include('layouts.front.vendors.scripts')
 </body>
 </html>
