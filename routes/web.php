@@ -16,5 +16,6 @@ Route::get('/', function () {
 //*********************************************rutas del dashboard/backend********************************************//
 
 //rutas sin login
-
+//test
+//
 //rutas autentificadas
