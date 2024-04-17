@@ -103,6 +103,15 @@ function mixAssetsDir(query, cb) {
     });
 }
 
+mixAssetsDir('styles/vendors/**/*.css', (src, dest) => mix.copy(src, dest));
+mixAssetsDir('styles/vendors/**/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/\.scss$/, '.css'), {sassOptions})
+);
+
+mixAssetsDir('scripts/vendors/**/*.js', (src, dest) => mix.js(src, dest));
+mixAssetsDir('styles/vendors/**/*.js', (src, dest) => mix.js(src, dest));
+mixAssetsDir('styles/*.{png,jpg,jpeg,gif,svg}', (src, dest) => mix.scripts(src, dest));
+mixAssetsDir('styles/**/*.{png,jpg,jpeg,gif,svg}', (src, dest) => mix.scripts(src, dest));
 /*
  |--------------------------------------------------------------------------
  | Global Images
@@ -120,6 +129,7 @@ mixAssetsDir('fonts/!(_)*.scss', (src, dest) =>
     mix.sass(src, dest.replace(/(\\|\/)scss(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), {sassOptions})
 );
 
+mix.copyDirectory('resources/assets/fonts', 'public/assets/fonts');
 /*
 
 
@@ -133,8 +143,14 @@ mixAssetsDir('fonts/!(_)*.scss', (src, dest) =>
  |--------------------------------------------------------------------------
  */
 
+// Core javascripts
+mixAssetsDir('scripts/front/**/*.js', (src, dest) => mix.js(src, dest));
 
-
+//Core styles
+mixAssetsDir('styles/front/**/*.css', (src, dest) => mix.copy(src, dest));
+mixAssetsDir('styles/front/**/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/\.scss$/, '.css'), {sassOptions})
+);
 
 
 
@@ -148,5 +164,41 @@ mixAssetsDir('fonts/!(_)*.scss', (src, dest) =>
  | componentes del back
  |--------------------------------------------------------------------------
  */
+
+
+// Core stylesheets
+mixAssetsDir('vendor/dashboard/scss/**/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/(\\|\/)scss(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), {sassOptions})
+);
+
+// Core javascripts
+mixAssetsDir('scripts/dashboard/**/*.js', (src, dest) => mix.js(src, dest));
+
+// Libs
+mixAssetsDir('vendor/dashboard/libs/**/*.js', (src, dest) => mix.js(src, dest));
+mixAssetsDir('vendor/dashboard/libs/**/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/\.scss$/, '.css'), {sassOptions})
+);
+mixAssetsDir('vendor/dashboard/libs/**/*.{png,jpg,jpeg,gif}', (src, dest) => mix.copy(src, dest));
+
+// Fonts
+mixAssetsDir('vendor/dashboard/fonts/*/*', (src, dest) => mix.copy(src, dest));
+mixAssetsDir('vendor/dashboard/fonts/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/(\\|\/)scss(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), {sassOptions})
+);
+
+/*
+ |--------------------------------------------------------------------------
+ | Application assets
+ |--------------------------------------------------------------------------
+ */
+
+mixAssetsDir('scripts/dashboard/**/*.js', (src, dest) => mix.scripts(src, dest));
+mixAssetsDir('styles/sass/dashboard/**/*.css', (src, dest) => mix.copy(src, dest));
+mixAssetsDir('styles/sass/dashboard/**/!(_)*.scss', (src, dest) =>
+    mix.sass(src, dest.replace(/\.scss$/, '.css'), {sassOptions})
+);
+
+mix.copy('node_modules/boxicons/fonts/*', 'public/assets/vendor/dashboard/fonts/boxicons');
 
 mix.version();

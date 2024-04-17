@@ -58,3 +58,7 @@ Homestead.json
 /package-lock.json
 /.idea/watcherTasks.xml
 /public/material/
+/.idea/codeception.xml
+/.idea/jhones.iml
+/.idea/php.xml
+/.idea/phpspec.xml

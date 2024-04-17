@@ -1,0 +1,39 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+/******* front Theming ********/
+:root {
+    --blue: #007bff !important;
+    --indigo: #6610f2 !important;
+    --purple: #6f42c1 !important;
+    --pink: #e83e8c !important;
+    --red: #dc3545 !important;
+    --orange: #fd7e14 !important;
+    --yellow: #ffc107 !important;
+    --green: #28a745 !important;
+    --teal: #20c997 !important;
+    --cyan: #17a2b8 !important;
+    --white: #fff !important;
+    --gray: #6c757d !important;
+    --gray-dark: #343a40 !important;
+    --primary: #6cb50b !important;
+    --secondary: #6c757d !important;
+    --success: #28a745 !important;
+    --info: #17a2b8 !important;
+    --warning: #ffc107 !important;
+    --danger: #dc3545 !important;
+    --light: #ffffff !important;
+    --dark: #343a40 !important;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Roboto", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
