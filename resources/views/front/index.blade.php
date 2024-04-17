@@ -59,15 +59,15 @@
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="{{ $setting->github_url }}"><i class="fab fa-github"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="{{ $setting->fb_url }}"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="{{ $setting->linkedin_url }}"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->github_url }}"><i class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->fb_url }}"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->linkedin_url }}"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Politica de privacidad</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terminos y condiciones</a>
-            </div>
+{{--            <div class="d-flex justify-content-center mb-3">--}}
+{{--                <a class="text-white" href="#">Politica de privacidad</a>--}}
+{{--                <span class="px-3">|</span>--}}
+{{--                <a class="text-white" href="#">Terminos y condiciones</a>--}}
+{{--            </div>--}}
             <p class="m-0">&copy; <a class="text-white font-weight-bold" href="https://www.jhon.es">jhon.es</a>. Todos los derechos reservados.
             </p>
         </div>

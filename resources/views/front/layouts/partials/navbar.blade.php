@@ -12,9 +12,9 @@
             <a href="#qualification" class="nav-item nav-link">Experiencia</a>
             <a href="#skill" class="nav-item nav-link">Habilidades</a>
             <a href="#service" class="nav-item nav-link">Servicios</a>
-            <a href="#portfolio" class="nav-item nav-link">Portafolio</a>
+{{--            <a href="#portfolio" class="nav-item nav-link">Portafolio</a>--}}
             <a href="#testimonial" class="nav-item nav-link">Recomendaciones</a>
-            <a href="#contact" class="nav-item nav-link">Contacto</a>
+{{--            <a href="#contact" class="nav-item nav-link">Contacto</a>--}}
         </div>
 {{--        <a href="" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>--}}
     </div>
