@@ -13,7 +13,7 @@
                 <p>{{ $setting->about_description }}</p>
                 <div class="row mb-3">
                     <div class="col-sm-6 py-2"><h6>Nombre: <span class="text-secondary">{{$user->name}}</span></h6></div>
-                    <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">{{$user->experience}} años</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Experiencia: <span class="text-secondary">{{$user->experience}} años</span></h6></div>
                     <div class="col-sm-6 py-2"><h6>Teléfono: <span class="text-secondary">{{$user->phone}}</span></h6></div>
                     <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">{{$user->email}}</span></h6></div>
                 </div>

@@ -1,5 +1,6 @@
 $primary: #108fef;
 $secondary: #3b85dc;
+$homebg: #365d7b;
 $success:       $green;
 $info:          $cyan;
 $warning:       $yellow;
@@ -48,6 +49,9 @@ h6,
 }
 .bg-primary{
     background-color: $primary !important;
+}
+.bg-home{
+    background-color: $homebg !important;
 }
 .text-primary{
     color: $primary !important;

@@ -22,7 +22,7 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
+    <div class="container-fluid bg-home d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
@@ -30,9 +30,9 @@
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">{{ $user?->name }}</h1>
-                    <h5 class="text-white font-weight-normal mb-3 text-center">En programación, seguridad y sistemas,<br> la eficiencia es mi firma.</h5>
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
                     <div class="typed-text d-none">{{ $user?->job }}</div>
+                    <h5 class="text-white font-weight-normal my-3 text-center">En programación, seguridad y sistemas,<br> la eficiencia es mi firma.</h5>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
                         <a href="{{ asset("storage/$setting->cv_url") }}" target="_blank" class="btn btn-outline-light mr-5">Descarga mi CV</a>
                         <button type="button" class="btn-play" data-toggle="modal"
