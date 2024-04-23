@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>{{ config('app.name', 'John es...') }}</title>
+    <title>{{ config('app.name', 'John es... Descubreme en mi trayectoria') }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="@yield('meta-keywords')" name="keywords">
     <meta content="@yield('meta-description')" name="description">

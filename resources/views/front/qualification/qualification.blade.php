@@ -1,8 +1,8 @@
 <div class="container-fluid py-5" id="qualification">
     <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
-            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Calidad</h1>
-            <h1 class="position-absolute text-uppercase text-primary">Educación & Experiencia</h1>
+            <h2 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Calidad</h2>
+            <h2 class="position-absolute text-uppercase text-primary">Educación & Experiencia</h2>
         </div>
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -13,7 +13,7 @@
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">{{ $education->title }}</h5>
                             <p class="mb-2"><strong>{{ $education->association }}</strong> | <small>{{ $education->from }} - {{ $education->to }}</small></p>
-                            <p>{{ $education->description }} </p>
+                            {!! $education->description !!}
                         </div>
                     @endforeach
                 </div>
@@ -26,7 +26,7 @@
                             <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">{{ $experience->title }}</h5>
                             <p class="mb-2"><strong>{{ $experience->association }}</strong> | <small>{{ $experience->from }} - {{ $experience->to }}</small></p>
-                            <p>{{ $experience->description }}</p>
+                            {!! $experience->description !!}
                         </div>
                     @endforeach
                 </div>

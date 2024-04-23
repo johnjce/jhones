@@ -1,9 +1,16 @@
 @extends('front.layouts.app')
 
+@section('meta-keywords')
+    jhon, ingeniero informático, desarrollador web, programador, laravel, php
+@endsection
+@section('meta-description')
+    Por mi curiosidad y constancia, considero ser un candidato idóneo para llevar a cabo trabajos de investigación y desarrollo. Me esfuerzo por formarme día a día en diversas áreas y me apasiona especialmente la seguridad informática. Al momento de programar, prefiero especialmente PHP y Phyton.
+@endsection
 @section('content')
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -12,7 +19,8 @@
                     </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="{{ asset("storage/$setting->video_url") }}" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="{{ asset("storage/$setting->video_url") }}"
+                                id="video" allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -26,20 +34,25 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="{{ asset("storage/$user?->profile_pic") }}" alt="">
+                    <img class="img-fluid w-100 rounded-circle shadow-sm"
+                         src="{{ asset("storage/$user?->profile_pic") }}" alt="">
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">{{ $user?->name }}</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
+                    <h1 class="display-3 text-uppercase text-primary mb-2"
+                        style="-webkit-text-stroke: 2px #ffffff;">{{ $user?->name }}</h1>
+                    <h2 class="typed-text-output d-inline font-weight-lighter text-white"></h2>
                     <div class="typed-text d-none">{{ $user?->job }}</div>
-                    <h5 class="text-white font-weight-normal my-3 text-center">En programación, seguridad y sistemas,<br> la eficiencia es mi firma.</h5>
+                    <h5 class="text-white font-weight-normal my-3 text-center">En programación, seguridad y
+                        sistemas,<br> la eficiencia es mi firma.</h5>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="{{ asset("storage/$setting->cv_url") }}" target="_blank" class="btn btn-outline-light mr-5">Descarga mi CV</a>
+                        <a href="{{ asset("storage/$setting->cv_url") }}" target="_blank"
+                           class="btn btn-outline-light mr-5">Descarga mi CV</a>
                         <button type="button" class="btn-play" data-toggle="modal"
                                 data-src="{{ asset("storage/$setting->video_url") }}" data-target="#videoModal">
                             <span></span>
                         </button>
-                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">La música es el alma hablando.</h5>
+                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">La música es el alma
+                            hablando.</h5>
                     </div>
                 </div>
             </div>
@@ -51,16 +64,18 @@
     @include('front.qualification.qualification')
     @include('front.skills.skills')
     @include('front.services.services')
-{{--    @include('front.portfolio.portfolio')--}}
+    {{--    @include('front.portfolio.portfolio')--}}
     @include('front.testimonial.testimonial')
-{{--    @include('front.contact.contact')--}}
+    {{--    @include('front.contact.contact')--}}
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->github_url }}"><i class="fab fa-github"></i></a>
-                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->fb_url }}"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->github_url }}"><i
+                            class="fab fa-github"></i></a>
+                <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->fb_url }}"><i
+                            class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-light btn-social mr-2" target="_blank" href="{{ $setting->linkedin_url }}"><i class="fab fa-linkedin-in"></i></a>
             </div>
 {{--            <div class="d-flex justify-content-center mb-3">--}}
